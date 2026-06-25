@@ -1,0 +1,149 @@
+/* VARIABLES */
+:root{
+    /* Paleta de Colores*/
+    --color-primario: blue;
+    --color-secundario: #2ba329;
+    --color-caja: white;
+    --color-texto-oscuro: black;
+    /* Sombras y Animaciones */
+    --sombra-principal: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    --sombra-suave: 0px 0px 5px rgba(0, 0, 0, 1);
+    --transicion-suave: 0.2s ease-in-out;
+    /* Tipografia y Estructura */
+    --fuente: "PT Serif", serif;    /* Fuente importada de google fonts*/
+    --radio-contenedor: 30px;
+    --radio-tarjeta: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* RESET Y CONFIGURACION GLOBAL */
+html {
+    scroll-behavior: smooth; /* Hace que toda la página scrollee suave */
+}
+
+body{
+    font-family: var(--fuente);
+    font-size: 16px;
+    line-height: 1.6;   /* Separación de renglones */
+    margin: 0 auto;     /* Separación del resto de los elementos */
+    background-color: white;
+}
+
+main{
+    padding: 1.5rem;
+}
+
+/* HEADER Y NAVEGACION */
+
+header{
+    position: sticky;   /* Permite que el header se quede fijo en la parte superior al hacer scroll */
+    top: 0;             /* Se pega al top de la ventana */
+    width: 100%;         /* Ocupa todo el ancho de la ventana */
+    font-family: var(--fuente);
+    z-index: 1; /*Para que quede encima de todo*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.518); /* Sombra */
+}
+
+/* TARJETAS Y BLOQUES SEMANTICOS */
+.estilo-container{  /* Bloque genérico*/
+    margin-top: 20px;
+    box-shadow: var(--sombra-suave);
+    border: solid white;
+    border-radius: var(--radio-contenedor);
+    background-color: var(--color-caja);
+    padding: 1.5rem;
+}
+
+.borde-sup-azul {
+  border: none; /* Borra los bordes generados por .estilo-container */
+  border-top: 5px solid var(--color-primario); /* Pone solo un borde superior de color */
+  border-bottom:5px solid var(--color-primario);
+}
+
+
+
+
+
+
+
+
+
+#subir-al-inicio { /* Evita que el menú sticky tape el inicio al usar enlaces # */
+    scroll-margin-top: 100px; 
+}
+
+
+
+
+
+
+
+
+
+/* COMPONENTES DE FORMULARIOS */
+.form-label {
+    font-weight: bold;
+}
+
+.form-control, .form-select {
+    font-size: small;
+}
+
+.textarea-fijo {
+  resize: none; /* Bloquea la esquina para que el usuario no estire la caja */
+  overflow-y: auto; /* Activa el scroll vertical solo cuando el texo se desborde */
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    font-size: 1rem;
+    color: var(--color-texto-oscuro);
+    box-shadow: 0px 0px 5px var(--sombra-suave);
+}
+
+.titulos {
+  width: 100%;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #1A2B4A, #6CACE4);
+}
+
+
+.tarjeta-memoria {
+  background: #1A2B4A;
+  color: white;
+  padding: 2rem;
+  border: 3px solid #6CACE4;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+.tarjeta-fecha { color: #6CACE4; font-size: 0.9rem; }
+.tarjeta-mensaje { font-size: 1.3rem; font-style: italic; margin: 1rem 0; }
+.tarjeta-firma { color: #6CACE4; font-size: 0.85rem; }
+
+
+.error { color: #B71C1C; font-weight: 600; }
+.exito { color: #1A6B2A; font-weight: 600; }
