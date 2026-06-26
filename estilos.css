@@ -1,7 +1,7 @@
 /* VARIABLES */
 :root{
     /* Paleta de Colores*/
-    --color-primario: blue;
+    --color-primario: rgb(94, 94, 202);
     --color-secundario: #2ba329;
     --color-caja: white;
     --color-texto-oscuro: black;
